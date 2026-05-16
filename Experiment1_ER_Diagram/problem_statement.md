@@ -22,122 +22,43 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 - Payments tracked for memberships and sessions.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_fitness.png)
-
-### Entities and Attributes
-
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-
-### Relationships and Constraints
-
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
-
-### Assumptions
-- 
-- 
-- 
+ 
+<img width="1702" height="512" alt="Er diagram" src="https://github.com/user-attachments/assets/87b078dd-99e3-4eef-adb0-9595ee4cec84" />
 
 ---
 
-# Scenario B: City Library Event & Book Lending System
-
-**Business Context:**  
-The Central Library wants to manage book lending and cultural events.
-
-**Requirements:**  
-- Members borrow books, with loan and return dates tracked.  
-- Each book has title, author, and category.  
-- Library organizes events; members can register.  
-- Each event has one or more speakers/authors.  
-- Rooms are booked for events and study.  
-- Overdue fines apply for late returns.
-
-### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_library.png)
-
 ### Entities and Attributes
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-
-### Relationships and Constraints
-
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
-
-### Assumptions
-- 
-- 
-- 
+| Entity  | Attributes (PK, FK)                                                     | Notes                                  |
+| ------- | ----------------------------------------------------------------------- | -------------------------------------- |
+| Member  | **Member_ID (PK)**, Name, Membership_Type, Start_Date                   | Stores gym member details              |
+| Trainer | **Trainer_ID (PK)**, Name, Specialization, Contact_No                   | Stores trainer information             |
+| Program | **Program_ID (PK)**, Program_Name, Description                          | Contains fitness program details       |
+| Session | **Session_ID (PK)**, Date, Time, Start_Date                             | Represents training sessions           |
+| Payment | **Payment_ID (PK)**, Amount, Payment_Date, Payment_Type, Member_ID (FK) | Stores payment records made by members |
 
 ---
 
-# Scenario C: Restaurant Table Reservation & Ordering
-
-**Business Context:**  
-A popular restaurant wants to manage reservations, orders, and billing.
-
-**Requirements:**  
-- Customers can reserve tables or walk in.  
-- Each reservation includes date, time, and number of guests.  
-- Customers place food orders linked to reservations.  
-- Each order contains multiple dishes; dishes belong to categories (starter, main, dessert).  
-- Bills generated per reservation, including food and service charges.  
-- Waiters assigned to serve reservations.
-
-### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_restaurant.png)
-
-### Entities and Attributes
-
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-
 ### Relationships and Constraints
 
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
-
-### Assumptions
-- 
-- 
-- 
+| Relationship                 | Cardinality | Participation         | Notes                                      |
+| ---------------------------- | ----------- | --------------------- | ------------------------------------------ |
+| Member — Register — Program  | M:N         | Total on Member side  | Members can register for multiple programs |
+| Trainer — Assigned — Program | M:N         | Partial               | Trainers may handle multiple programs      |
+| Member — Book — Session      | M:N         | Partial               | Members can book many sessions             |
+| Trainer — Host — Session     | M:N         | Partial               | Trainers can host multiple sessions        |
+| Member — Pay — Payment       | 1:N         | Total on Payment side | Each payment belongs to one member         |
 
 ---
 
-## Instructions for Students
+### Assumptions
+- Each entity has a unique primary key.
+- Members can enroll in more than one fitness program.
+- Trainers may conduct both group and personal sessions.
+- Payments include membership fees and session charges.
+- Sessions can be attended by multiple members.
+- Attendance details are maintained separately or within session records.
 
-1. Complete **all three scenarios** (A, B, C).  
-2. Identify entities, relationships, and attributes for each.  
-3. Draw ER diagrams using **draw.io / diagrams.net** or hand-drawn & scanned.  
-4. Fill in all tables and assumptions for each scenario.  
-5. Export the completed Markdown (with diagrams) as **a single PDF**
+---
+
+
