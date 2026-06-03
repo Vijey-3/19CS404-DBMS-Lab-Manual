@@ -79,6 +79,10 @@ END;
 **Output:**  
 The program should display the employee details or an error message.
 
+**Code and Output:**
+
+<img width="366" height="616" alt="image" src="https://github.com/user-attachments/assets/ef48287c-0460-4582-b7c1-9c2d18b73b90" />
+
 ---
 
 ### **Question 2: Parameterized Cursor with Exception Handling**
@@ -97,6 +101,11 @@ The program should display the employee details or an error message.
 
 **Output:**  
 The program should display the employee details within the specified salary range or an error message if no data is found.
+
+**Code and Output:**
+
+<img width="361" height="651" alt="image" src="https://github.com/user-attachments/assets/f9b9b544-0602-4ee3-9c3a-6785be900e4d" />
+
 
 ---
 
@@ -117,6 +126,10 @@ The program should display the employee details within the specified salary rang
 **Output:**  
 The program should display employee names with their department numbers or the appropriate error message if no data is found.
 
+**Code and Output:**
+
+<img width="361" height="691" alt="image" src="https://github.com/user-attachments/assets/4acb6818-e112-4edf-84a2-7b7820025349" />
+
 ---
 
 ### **Question 4: Cursor with `%ROWTYPE` and Exception Handling**
@@ -136,6 +149,10 @@ The program should display employee names with their department numbers or the a
 **Output:**  
 The program should display employee records or the appropriate error message if no data is found.
 
+**Code and Output:**
+
+<img width="365" height="749" alt="image" src="https://github.com/user-attachments/assets/b943968d-a3be-4b0a-b28e-90604a028d45" />
+
 ---
 
 ### **Question 5: Cursor with FOR UPDATE Clause and Exception Handling**
@@ -154,6 +171,10 @@ The program should display employee records or the appropriate error message if 
 
 **Output:**  
 The program should update employee salaries and display a message, or it should display an error message if no data is found.
+
+**Code and Output:**
+
+<img width="363" height="673" alt="image" src="https://github.com/user-attachments/assets/b5b8fe10-6e3a-410a-bcf7-7861a78b37bb" />
 
 ---
 
